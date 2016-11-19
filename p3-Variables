@@ -1,0 +1,179 @@
+#Variables Python2
+
+# Python comment
+
+# variables: placeholders for important values
+# used to avoid recomputing values and to
+# give values names that help reader understand code
+
+
+# valid variable names: consists of letters, numbers, underscore (_)
+# starts with letter or underscore
+# case sensitive (capitalization matters)
+
+# legal names - ninja, Ninja, n_i_n_j_a
+# illegal names - 1337, 1337ninja
+
+# Python convention - multiple words joined by _
+# legal names - elite_ninja, leet_ninja, ninja_1337
+# illegal name 1337_ninja
+
+# assign to variable name using single equal sign =
+# (remember that double equals == is used to test equality)
+
+# examples 
+
+my_name = "Jon Fishman"
+print my_name
+
+my_age = 28
+print my_age
+
+# birthday - add one
+
+my_age = my_age + 1 
+#SAME AS: 
+my_age += my_age + 1
+#SAME AS:
+my_age = 1
+#SAME AS: *********Best
+my_age += 1
+
+print my_age
+
+# the story of the magic pill
+
+magic_pill = 30
+print my_age - magic_pill
+
+my_grand_dad = 74
+
+print my_grand_dad - 2 * magic_pill
+
+
+#################
+##  Exercises  ##
+#################
+
+# Temperature examples
+
+# convert from Fahrenheit to Celsuis
+# c = 5 / 9 * (f - 32)
+# use explanatory names
+
+temp_Fahrenheit = 212
+
+temp_Celsius = 5.0 / 9.0 * (temp_Fahrenheit - 32)
+
+print temp_Celsius
+
+# 32 Fahrenheit is 0 Celsius, 212 Fahrenheit is 100 Celsius
+
+
+# convert from Celsius to Fahrenheit
+# f = 9 / 5 * c + 32
+
+temp_Celsius = 100
+
+temp_Fahrenheit = 9.0 / 5.0 * temp_Celsius + 32
+
+print temp_Fahrenheit
+
+
+width = 10
+height = 10
+
+PI = 3.14
+radius = 8
+
+# Rectangle perimeter formula
+
+rectangular_perimeter = 2 * width + 2 * height
+
+print "A rectangle " + str(width) + " inches wide and " + str(height),
+print "inches high has a perimeter of " + str(rectangular_perimeter) + " inches."
+
+
+
+# Rectangle area formula
+
+rectangle_area = width * height
+
+print "A rectangle " + str(width) + " inches wide and " + str(height),
+print "inches high has an area of " + str(rectangle_area) + " square inches."
+
+
+
+# Circle circumference formula
+
+circle_circumference = 2 * PI * radius
+
+print "A circle with a radius of " + str(radius),
+print "inches has a circumference of " + str(circle_circumference) + " inches."
+
+
+
+# Circle area formula
+
+circle_area = PI * radius ** 2
+
+print "A circle with a radius of " + str(radius),
+print "inches has an area of " + str(circle_area) + " square inches."
+
+
+
+
+# Future value formula
+
+present_value = 1000
+annual_rate = 7
+years = 10
+
+future_value = present_value * (1 + 0.01 * annual_rate) ** years
+
+print "The future value of $" + str(present_value) + " in " + str(years),
+print "years at an annual rate of " + str(annual_rate) + "% is $" + str(future_value) + "."
+
+
+
+
+
+# Distance formula
+
+x0 = 2
+y0 = 2
+x1 = 5
+y1 = 6
+
+distance = ((x0 - x1) ** 2 + (y0 - y1) ** 2) ** 0.5
+
+print "The distance from (" + str(x0) + ", " + str(y0) + ") to", 
+print "(" + str(x1) + ", " + str(y1) + ") is " + str(distance) + "."
+
+
+
+
+
+# Triandle area (Heron's) formula
+
+x0, y0 = 0, 0
+x1, y1 = 3, 4
+x2, y2 = 1, 1
+
+a = ((x0 - x1) ** 2 + (y0 - y1) ** 2) ** 0.5
+b = ((x0 - x2) ** 2 + (y0 - y2) ** 2) ** 0.5
+c = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
+s = 0.5 * (a + b + c)
+area = (s * ((s - a) * (s - b) * (s - c))) ** 0.5
+
+print "A triangle with vertices (" + str(x0) + "," + str(y0) + "),",
+print "(" + str(x1) + "," + str(y1) + "), and",
+print "(" + str(x2) + "," + str(y2) + ") has an area of " + str(area) + "."
+
+
+
+
+
+
+
+

@@ -1,0 +1,202 @@
+# Functions: a piece of code that you define that you can execute later
+
+# What is the function going to do? State what it does.
+
+# Functions have 2 parts: Header and body
+
+# Header tells us about the function
+# starts with "def" for define
+# then the function name
+# (perameters)
+# colon ":" means about to start a new block of code
+
+# Body is indented. When you stop the indentation, the block of code is done
+
+# return causes a function to return a value which is the output of the function
+
+# computes the area of a triangle
+def triangle_area(base, height):     # header - ends in colon
+    area = (1.0 / 2) * base * height # body - all of body is indented
+    return area                      # body - return outputs value
+
+a1 = triangle_area(3, 8)
+print a1
+# a1 got the output of the function triangle area 
+a2 = triangle_area(14, 2)
+print a2
+
+#-----------------------------------
+
+# converts fahrenheit to celsius
+def fahrenheit2celsius(fahrenheit):
+    celsius = (5.0 / 9) * (fahrenheit - 32)
+    return celsius
+
+c1 = fahrenheit2celsius(32) # Freezing point
+c2 = fahrenheit2celsius(212) # Boiling point
+print c1, c2
+
+#-----------------------------------
+
+# you can use functions wihin functions
+
+# converts fahrenheit to kelvin
+def fahrenheit2kelvin(fahrenheit):
+    celsius = fahrenheit2celsius(fahrenheit)
+    kelvin = celsius + 273.15
+    return kelvin
+
+k1 = fahrenheit2kelvin(32)
+k2 = fahrenheit2kelvin(212)
+print k1, k2
+
+#---------------------------------------
+
+# functions with no perameters and no return value
+
+# prints hello, world!
+def hello():
+    print "Hello, world!"
+
+hello()      # call to hello prints "Hello, world!"
+h = hello()  # call to hello prints "Hello, world!" a second time
+print h      # prints None since there was no return value
+
+# None is a special value, means nothing is there
+
+
+#################
+##  Exercises  ##
+#################
+
+# Write a Python function 𝚖𝚒𝚕𝚎𝚜_𝚝𝚘_𝚏𝚎𝚎𝚝 that takes a parameter 𝚖𝚒𝚕𝚎𝚜 and returns the number of feet in 𝚖𝚒𝚕𝚎𝚜 miles. 
+
+def miles_to_feet(miles):
+	feet = miles * 5280
+	return feet
+
+# Write a Python function 𝚝𝚘𝚝𝚊𝚕_𝚜𝚎𝚌𝚘𝚗𝚍𝚜 that takes three parameters 𝚑𝚘𝚞𝚛𝚜, 𝚖𝚒𝚗𝚞𝚝𝚎𝚜 and 𝚜𝚎𝚌𝚘𝚗𝚍𝚜 and returns the total number of seconds for 𝚑𝚘𝚞𝚛𝚜 hours, 𝚖𝚒𝚗𝚞𝚝𝚎𝚜 minutes and 𝚜𝚎𝚌𝚘𝚗𝚍𝚜 seconds. 
+
+def total_seconds(hours, minutes, seconds):
+    total_seconds = hours * 60 * 60 + minutes * 60 + seconds
+    return total_seconds
+
+# Write a Python function 𝚛𝚎𝚌𝚝𝚊𝚗𝚐𝚕𝚎_𝚙𝚎𝚛𝚒𝚖𝚎𝚝𝚎𝚛 that takes two parameters 𝚠𝚒𝚍𝚝𝚑 and 𝚑𝚎𝚒𝚐𝚑𝚝 corresponding to the lengths of the sides of a rectangle and returns the perimeter of the rectangle in inches. 
+
+def rectangle_perimeter(width, height):
+	rectangular_perimeter = 2 * width + 2 * height
+	return rectangular_perimeter
+
+# Write a Python function 𝚛𝚎𝚌𝚝𝚊𝚗𝚐𝚕𝚎_𝚊𝚛𝚎𝚊 that takes two parameters 𝚠𝚒𝚍𝚝𝚑 and 𝚑𝚎𝚒𝚐𝚑𝚝 corresponding to the lengths of the sides of a rectangle and returns the area of the rectangle in square inches. 
+
+def rectangle_area(width, height):
+	rectangle_area = width * height
+	return rectangle_area
+
+# Write a Python function 𝚌𝚒𝚛𝚌𝚕𝚎_𝚌𝚒𝚛𝚌𝚞𝚖𝚏𝚎𝚛𝚎𝚗𝚌𝚎 that takes a single parameter 𝚛𝚊𝚍𝚒𝚞𝚜 corresponding to the radius of a circle in inches and returns the the circumference of a circle with radius 𝚛𝚊𝚍𝚒𝚞𝚜 in inches. Do not use π=3.14, instead use the 𝚖𝚊𝚝𝚑 module to supply a higher-precision approximation to π.
+
+def circle_circumference(radius):
+	circle_circumference = 2 * math.pi * radius
+	return circle_circumference
+
+# Write a Python function 𝚌𝚒𝚛𝚌𝚕𝚎_𝚊𝚛𝚎𝚊 that takes a single parameter 𝚛𝚊𝚍𝚒𝚞𝚜 corresponding to the radius of a circle in inches and returns the the area of a circle with radius 𝚛𝚊𝚍𝚒𝚞𝚜 in square inches. Do not use π=3.14, instead use the 𝚖𝚊𝚝𝚑 module to supply a higher-precision approximation to π. 
+
+def circle_area(radius):
+	circle_area = math.pi * radius ** 2
+	return circle_area
+
+# Write a Python function 𝚏𝚞𝚝𝚞𝚛𝚎_𝚟𝚊𝚕𝚞𝚎 that takes three parameters 𝚙𝚛𝚎𝚜𝚎𝚗𝚝_𝚟𝚊𝚕𝚞𝚎, 𝚊𝚗𝚗𝚞𝚊𝚕_𝚛𝚊𝚝𝚎 and 𝚢𝚎𝚊𝚛𝚜 and returns the future value of 𝚙𝚛𝚎𝚜𝚎𝚗𝚝_𝚟𝚊𝚕𝚞𝚎 dollars invested at 𝚊𝚗𝚗𝚞𝚊𝚕_𝚛𝚊𝚝𝚎 percent interest, compounded annually for 𝚢𝚎𝚊𝚛𝚜 years. 
+
+def future_value(present_value, annual_rate, years):
+	future_value = present_value * (1 + 0.01 * annual_rate) ** years
+	return future_value
+
+
+# Write a Python function 𝚗𝚊𝚖𝚎_𝚝𝚊𝚐 that takes as input the parameters 𝚏𝚒𝚛𝚜𝚝_𝚗𝚊𝚖𝚎 and 𝚕𝚊𝚜𝚝_𝚗𝚊𝚖𝚎 (strings) and returns a string of the form "𝙼𝚢 𝚗𝚊𝚖𝚎 𝚒𝚜 % %." where the percents are the strings 𝚏𝚒𝚛𝚜𝚝_𝚗𝚊𝚖𝚎 and 𝚕𝚊𝚜𝚝_𝚗𝚊𝚖𝚎.
+
+def name_tag(first_name, last_name):
+	about_me = "My name is " + first_name + " " + last_name + "."
+	return about_me
+
+# Write a Python function 𝚗𝚊𝚖𝚎_𝚊𝚗𝚍_𝚊𝚐𝚎 that takes as input the parameters 𝚗𝚊𝚖𝚎 (a string) and 𝚊𝚐𝚎 (a number) and returns a string of the form "% 𝚒𝚜 % 𝚢𝚎𝚊𝚛𝚜 𝚘𝚕𝚍." where the percents are the string forms of 𝚗𝚊𝚖𝚎 and 𝚊𝚐𝚎. 
+
+def name_and_age(name, age):
+	more_about_me = name + " is " + str(age) + " years old."
+	return more_about_me
+
+# Write a Python function 𝚙𝚘𝚒𝚗𝚝_𝚍𝚒𝚜𝚝𝚊𝚗𝚌𝚎 that takes as the parameters 𝚡𝟶, 𝚢𝟶, 𝚡𝟷 and 𝚢𝟷, and returns the distance between the points (x0,y0) and (x1,y1). 
+
+def point_distance(x0, y0, x1, y1):
+	distance = ((x0 - x1) ** 2 + (y0 - y1) ** 2) ** 0.5
+	return distance
+
+
+# Write a Python function 𝚝𝚛𝚒𝚊𝚗𝚐𝚕𝚎_𝚊𝚛𝚎𝚊 that takes the parameters 𝚡𝟶, 𝚢𝟶, 𝚡𝟷,𝚢𝟷, 𝚡𝟸, and 𝚢𝟸, and returns the area of the triangle with vertices (x0,y0), (x1,y1) and (x2,y2). 
+
+# def triangle_area(x0, y0, x1, y1, x2, y2):
+# 	a = ((x0 - x1) ** 2 + (y0 - y1) ** 2) ** 0.5
+# 	b = ((x0 - x2) ** 2 + (y0 - y2) ** 2) ** 0.5
+# 	c = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
+# 	s = 0.5 * (a + b + c)
+# 	area = (s * ((s - a) * (s - b) * (s - c))) ** 0.5
+# 	return area
+
+# ** MORE CORRECT:
+
+def triangle_area(x0, y0, x1, y1, x2, y2):
+	a = point_distance(x0, y0, x1, y1)
+	b = point_distance(x0, y0, x2, y2)
+	c = point_distance(x1, y1, x2, y2)
+	s = 0.5 * (a + b + c)
+	area = (s * ((s - a) * (s - b) * (s - c))) ** 0.5
+	return area
+
+# Write a Python function 𝚙𝚛𝚒𝚗𝚝_𝚍𝚒𝚐𝚒𝚝𝚜 that takes an integer 𝚗𝚞𝚖𝚋𝚎𝚛 in the range [0,100), i.e., at least 0, but less than 100. It prints the message "𝚃𝚑𝚎 𝚝𝚎𝚗𝚜 𝚍𝚒𝚐𝚒𝚝 𝚒𝚜 %, 𝚊𝚗𝚍 𝚝𝚑𝚎 𝚘𝚗𝚎𝚜 𝚍𝚒𝚐𝚒𝚝 𝚒𝚜 %.", where the percent signs should be replaced with the appropriate values. (Hint: Use the arithmetic operators for integer division // and remainder % to find the two digits. Note that this function should print the desired message, rather than returning it as a string. 
+
+# def print_digits(number):
+#	tens = number // 10
+#	ones = number % 10
+#	message = "The tens digit is " + str(tens) + ", " + "and the ones digit is " + str(ones) + "."
+#	return message
+
+# OR:
+
+def print_digits(number):
+    """Prints the tens and ones digit of an integer in [0,100)."""
+    
+    print "The tens digit is " + str(number // 10) + ",",
+    print "and the ones digit is " + str(number % 10) + "."
+
+
+# Powerball is lottery game in which 6 numbers are drawn at random. Players can purchase a lottery ticket with a specific number combination and, if the number on the ticket matches the numbers generated in a random drawing, the player wins a massive jackpot. 
+
+# Write a Python function 𝚙𝚘𝚠𝚎𝚛𝚋𝚊𝚕𝚕 that takes no arguments and prints the message "𝚃𝚘𝚍𝚊𝚢'𝚜 𝚗𝚞𝚖𝚋𝚎𝚛𝚜 𝚊𝚛𝚎 %, %, %, %, 𝚊𝚗𝚍 %. 𝚃𝚑𝚎 𝙿𝚘𝚠𝚎𝚛𝚋𝚊𝚕𝚕 𝚗𝚞𝚖𝚋𝚎𝚛 𝚒𝚜 %.". The first five numbers should be random integers in the range [1,60), i.e., at least 1, but less than 60. In reality, these five numbers must all be distinct, but for this problem, we will allow duplicates. The Powerball number is a random integer in the range [1,36), i.e., at least 1 but less than 36. Use the 𝚛𝚊𝚗𝚍𝚘𝚖 module and the function 𝚛𝚊𝚗𝚍𝚘𝚖.𝚛𝚊𝚗𝚍𝚛𝚊𝚗𝚐𝚎 to generate the appropriate random numbers.Note that this function should print the desired message, rather than returning it as a string. 
+
+import random
+def powerball():
+    print "Today's numbers are " + str(random.randrange(1, 60)) + ",",
+    print str(random.randrange(1, 60)) + ",",
+    print str(random.randrange(1, 60)) + ",",
+    print str(random.randrange(1, 60)) + ", and",
+    print str(random.randrange(1, 60)) + ". The Powerball number is",
+    print str(random.randrange(1, 36)) + "."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

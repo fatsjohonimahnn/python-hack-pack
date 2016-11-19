@@ -1,0 +1,67 @@
+################################
+## General Python 2 Knowledge ##
+################################
+
+# a computer programming language that was conceived in the late 1980s by Guido van Rossum.
+# derived from the television series Monty Python's Flying Circus
+
+# Can use single or double quotes
+print 'Hello, world!'
+
+print "Hello, world!"
+
+#  but not both at same time like:
+# "Hello' == WRONG
+
+
+#-----------------------------
+# convert between data types:
+
+# use: int(), float(), str()
+
+print "Jon Fishman is " + str(28) + " years old."
+
+# prints: Jon Fishman is 28 years old.
+
+#-------------------------------
+# Python file names traditionally end in .py
+
+####################################################################################
+
+#General Formulas:
+
+# 5280 feet in a mile
+
+# 1 gram = 0.035274 ounces
+
+# The perimeter of a rectangle is 2w+2h, where w and h are the lengths of its sides. 
+
+# The area of a rectangle is wh, where w and h are the lengths of its sides. 
+
+# The circumference of a circle is 2πr where r is the radius of the circle. 
+
+π = 3.14
+r = 7 
+
+print 2 * π * r
+
+# The area of a circle is πr^2 where r is the radius of the circle. (The raised 2 in the formula is an exponent.) 
+
+print π * r ** 2
+
+# Given p dollars, the future value of this money when compounded yearly at a rate of r percent interest for y years is p(1+0.01r)^y. 
+
+p = 1000
+r = 7
+y = 10
+
+print p * (1 + 0.01 * 7) ** 10
+
+# The distance between two points (x0,y0) and (x1,y1) is sqrRoot( (x0−x1)^2 + (y0−y1)^2
+
+x0 = 2
+y0 = 2
+x1 = 5
+y1 = 6
+
+print ((x0 - x1) ** 2 + (x1 - y1) ** 2) ** 0.5
